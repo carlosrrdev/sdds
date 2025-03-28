@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class DatabaseCreator {
 
     // Pattern to match "lastname_firstname_dob" format
-    private static final Pattern DIRECTORY_PATTERN = Pattern.compile("([^_]+)_([^_]+)_([^_]+)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern DIRECTORY_PATTERN = Pattern.compile("([^_]+)_([^_]+)_([^_]+)_([^_]+)", Pattern.CASE_INSENSITIVE);
 
     // Record to hold extracted directory information
     public static class DirectoryInfo {
