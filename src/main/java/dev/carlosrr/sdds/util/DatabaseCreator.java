@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class DatabaseCreator {
 
     // Pattern to match "lastname_firstname_dob" format
-    private static final Pattern DIRECTORY_PATTERN = Pattern.compile("([^_]+)_([^_]+)_([^_]+)");
+    private static final Pattern DIRECTORY_PATTERN = Pattern.compile("([^_]+)_([^_]+)_([^_]+)", Pattern.CASE_INSENSITIVE);
 
     // Record to hold extracted directory information
     public static class DirectoryInfo {
@@ -34,7 +34,7 @@ public class DatabaseCreator {
      * Creates a SQLite database by scanning subdirectories in the specified directory path.
      *
      * @param rootDirectory The root directory to scan for subdirectories
-     * @param progressBar The progress bar to update during operation
+     * @param progressBar   The progress bar to update during operation
      * @return The path to the created database file
      */
     public static String createDatabase(String rootDirectory, JProgressBar progressBar) throws Exception {
