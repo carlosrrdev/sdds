@@ -92,7 +92,7 @@ public class ContentPanel extends JPanel {
 
         // Create a status label at the bottom
         statusLabel = new JLabel("No DB file loaded");
-        statusLabel.setForeground(Color.RED);
+        statusLabel.setForeground(new Color(239, 93, 93));
         statusLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         // Add some padding around the status label
@@ -220,10 +220,10 @@ public class ContentPanel extends JPanel {
     public void updateDbFileStatus(String filePath) {
         if (filePath == null || filePath.isEmpty()) {
             statusLabel.setText("No DB file loaded");
-            statusLabel.setForeground(Color.RED);
+            statusLabel.setForeground(new Color(208, 103, 103));
         } else {
             statusLabel.setText("DB file: " + filePath);
-            statusLabel.setForeground(new Color(0, 102, 0)); // Dark green
+            statusLabel.setForeground(new Color(17, 180, 109)); // Dark green
         }
 
         // Reset search field when changing databases
