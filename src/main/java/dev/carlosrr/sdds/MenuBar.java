@@ -2,12 +2,10 @@ package dev.carlosrr.sdds;
 
 import dev.carlosrr.sdds.util.ConfigManager;
 import dev.carlosrr.sdds.util.DatabaseManager;
+import dev.carlosrr.sdds.util.PdfToDirectoryDialog;
 
 import javax.swing.*;
 import java.io.File;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class MenuBar extends JMenuBar {
 
@@ -40,8 +38,14 @@ public class MenuBar extends JMenuBar {
         JMenuItem loadExistingDBItem = new JMenuItem("Load existing DB");
         loadExistingDBItem.addActionListener(e -> loadExistingDB());
 
+        JMenuItem pdfToDirectoryItem = new JMenuItem("PDF to Directory");
+        pdfToDirectoryItem.addActionListener(e -> {
+            new PdfToDirectoryDialog();
+        });
+
         actionsMenu.add(createNewDBItem);
         actionsMenu.add(loadExistingDBItem);
+        actionsMenu.add(pdfToDirectoryItem);
         return actionsMenu;
     }
 
