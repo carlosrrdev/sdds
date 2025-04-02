@@ -2,7 +2,6 @@ package dev.carlosrr.sdds;
 
 import dev.carlosrr.sdds.util.ConfigManager;
 import dev.carlosrr.sdds.util.DatabaseManager;
-import dev.carlosrr.sdds.util.PdfToDirectoryDialog;
 
 import javax.swing.*;
 import java.io.File;
